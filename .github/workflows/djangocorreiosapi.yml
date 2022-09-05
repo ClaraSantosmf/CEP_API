@@ -1,7 +1,8 @@
 name: Django CI
 
 on:
-  pull_request:
+  push:
+  pull request:
 
 jobs:
   build:
