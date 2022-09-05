@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Busca CEP    
+{% endblock %}
+
+
+{%block content%}
+
+<!-- VALIDAR O CEP EM BRANCO -->
+<script>
+
+
+function validarCEP() {
+    var x = document.forms["cep"]["consulta_cep"].value;
+    x = x.replace("-", "")
+    x = x.replace(".", "")
+    if (x == "" || x == null) {
+    alert("O CEP não pode ficar em branco");
+    return false;
+    }
+    else if (x.length > 8 || x.length < 8) {
+    alert("O CEP deve ter 8 números.");
+    return false;
+    }
+}
+
+$("#consulta_cep").mask("00.000-000");
+
+
+</script>
+<!-- fim da validação de cep em branco  -->
+
+<form class="pesquisador mt-5" action={% url 'resultado' %} method="get" required name="cep" onsubmit="return validarCEP()">
+    <div class="input-group mb-3 w-75 mt-5 p-lg-5">
+        
+        <span class="input-group-text">CEP:</span>
+        <input type="text" id="consulta_cep" value="{{ request.GET.consulta_cep }}" name="consulta_cep" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Digite apenas números">
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-5" id="busca--cep">Buscar CEP</button>
+</form>
+
+
+{% endblock %}

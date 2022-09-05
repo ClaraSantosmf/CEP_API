@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Resultado do CEP    
+{% endblock %}
+
+
+{%block content%}
+
+<div class="container h-75 mt-5 mb-5">
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="col-xs-2">Logradouro:</span>
+        <input type="text" disabled="disabled" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="{% if endereco.logradouro %}{{endereco.logradouro}} {% endif %}">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="col-xs-2">Bairro/Distrito:</span>
+        <input type="text" disabled="disabled" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="{% if endereco.bairro %}{{endereco.bairro}} {% endif %}">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="col-xs-2">Localidade/UF:</span>
+        <input type="text" disabled="disabled" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="{% if endereco.cidade.nome %} {{endereco.cidade.nome}} {% endif %}">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="col-xs-2">CEP:</span>
+        <input type="text" disabled="disabled" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder=" {% if endereco.cep %} {{endereco.cep}} {% endif %}">
+    </div>
+    <h2 class="invalido mb-5">{{ cepinvalido.cepinvalido }}</h2>
+
+    <div  class=" row d-flex justify-content-center align-content-center mb-5"  >  
+        <a href="/" class="btn btn-success col-3">Nova Busca</a>
+        {% if endereco.cep %}
+        <a href="{% url 'API' endereco.cep %}" class="btn btn-outline-secondary col-3">Integre a nossa API aqui </a>
+        {% endif %}
+    </div>
+
+</div>
+
+    
+{% endblock %}
+
+
+
+
+

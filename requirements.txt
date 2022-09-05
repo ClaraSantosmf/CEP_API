@@ -1,0 +1,16 @@
+# django and requirements
+asgiref==3.5.2
+backports.zoneinfo==0.2.1
+Django==4.0.6
+sqlparse==0.4.2
+
+# database connection
+# if your installing doesn't work, you should check:
+# https://github.com/huogerac/dev-tools/blob/master/ubuntu_20_04_focal/04_python_env.sh
+# in this repo you'll get some os dependencies
+psycopg2==2.9.3
+
+# .env loader
+python-dotenv==0.20.0
+
+#Test

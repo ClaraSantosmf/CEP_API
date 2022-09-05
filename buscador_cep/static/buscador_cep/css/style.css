@@ -1,0 +1,175 @@
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: "Roboto", sans-serif;
+}
+
+/* -------------------- MENU INICIO -------------------- */
+nav {
+  min-width: 100vw;
+  height: 40px;
+  text-align: center;
+  background-color: #0071ad;
+  margin: 0;
+  padding: 0;
+}
+
+nav > h1 {
+  text-align: center;
+  color: rgb(251, 255, 0);
+  font-size: 1.5rem;
+  padding-top: 10px;
+  font-weight: 700;
+}
+/* -------------------- MENU FIM -------------------- */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  gap: 1.5rem;
+}
+
+.container h1 {
+  font-size: 2rem;
+}
+
+.__container input {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid rgb(121, 121, 121);
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+.container input:hover {
+  border: 2px solid #0071ad;
+}
+
+/* .container input:focus {
+  border: 2px solid #0071ad;
+} */
+
+.container input[type="text"]:focus {
+  background-color: #f4f4ff;
+  border: 2px solid #ff0040;
+}
+
+.container button {
+  margin-top: 1px;
+  background-color: #0071ad;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  width: 110px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.container button:hover {
+  background-color: #fff;
+  color: #0071ad;
+  border: 2px solid #0071ad;
+}
+
+@media (max-width: 330px) {
+  .__container input {
+    width: 270px;
+  }
+}
+
+.pesquisador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===========RESULTS BEGINNING============= */
+
+.container--result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: left;
+}
+
+.container--result h1 {
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.__container--result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.__container--result .title {
+  background-color: #0071ad;
+  height: 15px;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 5px;
+}
+
+.__container--result .logradouro {
+  width: 300px;
+  border-radius: 7px 0px 0px 0px;
+}
+
+.__container--result .bairro--uf {
+  width: 120px;
+}
+
+.__container--result .cep {
+  width: 100px;
+  border-radius: 0px 7px 0px 0px;
+}
+
+.container--result button {
+  background-color: #0071ad;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  width: 110px;
+  height: 40px;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+.container--result button:hover {
+  background-color: #fff;
+  color: #0071ad;
+  border: 2px solid #0071ad;
+}
+
+.resultado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  padding: 2px 0px 2px 0px;
+}
+
+.resultado .r--logradouro {
+  width: 310px;
+  border-radius: 7px 0px 0px 0px;
+}
+
+.resultado .r--bairro--uf {
+  width: 130px;
+}
+
+.resultado .r--cep {
+  width: 100px;
+  border-radius: 0px 7px 0px 0px;
+}

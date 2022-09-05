@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Resultado do CEP    
+{% endblock %}
+
+
+{%block content%}
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="col-xs-2">Logradouro:</span>
+    <input type="text" disabled="disabled" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="col-xs-2">Bairro/Distrito:</span>
+    <input type="text" disabled="disabled" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="col-xs-2">Localidade/UF:</span>
+    <input type="text" disabled="disabled" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="col-xs-2">CEP:</span>
+    <input type="text" disabled="disabled" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+  <button type="submit" class="btn btn-primary" id="busca--cep">Buscar CEP</button>
+  <button type="submit" class="btn btn-primary" id="busca--cep">Buscar CEP</button>
+    <h3>Hurrru, temos API para voce integrar: {{ request.HOST }}</h3>
+
+{% endblock %}
